@@ -1,1 +1,1 @@
-# RGB-Color-Sliders
+Practicing making an RGB color slider
