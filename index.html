@@ -13,11 +13,14 @@
 
 <body>
     <div class="picker">
-        <div class="colorName">Red</div><input type="range" min="0" max="255" step="1" id="red" value="0"> 
-        <div class="colorName">Green</div><input type="range" min="0" max="255" step="1" id="green" value="0"> 
-        <div class="colorName">Blue</div><input type="range" min="0" max="255" step="1" id="blue" value="0">
+        <span class="colorName">Red</span><input type="range" min="0" max="255" step="1" id="red" value="0"> 
+        <span class="colorName">Green</span><input type="range" min="0" max="255" step="1" id="green" value="0"> 
+        <span class="colorName">Blue</span><input type="range" min="0" max="255" step="1" id="blue" value="0">
     </div>
     <div id="display"></div>
+    Hex: #<span class="result" onchange="hexResult()">000000</span>
+    RGB: rgb(<span id="Rresult">0</span>, <span id="Gresult">0</span>, <span id="Bresult">0</span>)
+
     <script type="text/javascript">
         var input = document.querySelectorAll("input");
         for (var i = 0; i < input.length; i++) {
@@ -28,6 +31,10 @@
                 var display = document.getElementById("display");
                 display.style.background = "rgb(" + red + ", " + green + ", " + blue + ")";
             });
+        }
+
+        function hexResult() {
+            (" + red + ", " + green + ", " + blue + ")
         }
     </script>
 
